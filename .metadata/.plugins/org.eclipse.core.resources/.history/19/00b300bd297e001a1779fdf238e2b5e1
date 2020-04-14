@@ -1,0 +1,19 @@
+package kr.inhatc.spring.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.zaxxer.hikari.HikariConfig;
+
+@Configuration
+@PropertySource("classpath:/application.properties")
+public class DataBasseConfiguration {
+
+	
+	@Bean
+	public HikariConfig hikariConfig() {
+		return new HikariConfig();
+	}
+	
+}

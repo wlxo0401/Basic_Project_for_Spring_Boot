@@ -1,0 +1,8 @@
+package kr.inhatc.spring.board.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class BoardController {
+	
+	@RequestMapping("/")
+}
