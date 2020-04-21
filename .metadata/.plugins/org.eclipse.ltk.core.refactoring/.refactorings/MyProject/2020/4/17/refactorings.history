@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MyProject/src/main/resources/mapper/board/sql-baord.xml&apos; to &apos;sql-board.xml&apos;" description="Rename resource &apos;sql-baord.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/mapper/board/sql-baord.xml" name="sql-board.xml" stamp="1587469233340" updateReferences="true"/>
+</session>

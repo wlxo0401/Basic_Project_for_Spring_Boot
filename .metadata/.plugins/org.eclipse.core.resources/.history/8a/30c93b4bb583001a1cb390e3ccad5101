@@ -1,0 +1,13 @@
+package kr.inhatc.spring.board.dto;
+// DTO : Data Transfer Object 데이터를 전달해주는 객체
+public class BoardDto {
+	
+	private int boardIdx;
+	private String title;
+	private String contents;
+	private int hitCnt;
+	private String createDatetime;
+	private String creatorId;
+	
+
+}

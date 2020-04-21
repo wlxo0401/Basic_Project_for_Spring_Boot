@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th=>
+<head>
+<meta charset="UTF-8">
+<title>게시판 리스트</title>
+</head>
+<body>
+	<h1>게시판 리스트 입니다.</h1>
+
+</body>
+</html>
