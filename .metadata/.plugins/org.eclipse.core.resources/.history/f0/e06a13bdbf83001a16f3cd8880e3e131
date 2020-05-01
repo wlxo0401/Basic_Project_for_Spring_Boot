@@ -1,5 +1,0 @@
-package kr.inhatc.spring.board.service;
-
-public class BoardServiceImpl implements BoardService {
-
-}

@@ -6,6 +6,19 @@
 <link rel = "stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <body>
+	<header>
+		<h1>게시판 구현 - 게시판 페이지</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="sub-menu-parent" tab-index="0">
+				<a href="/">메인페이지</a>
+			</li>
+			<li class="sub-menu-parent" tab-index="0">
+				<a href="/board/boardList">게시판 페이지</a>
+			</li>
+		</ul>
+	</nav>
 	<div class="container">
 		<h2>게시판 목록</h2>
 		<table class="board_list">
@@ -26,7 +39,9 @@
 			<tbody>
 				<tr th:if='${#lists.size(list)} > 0' th:each='vo : ${list}'>
 					<td th:text="${vo.boardIdx}"></td>
-					<td th:text="${vo.title}"></td>
+					<td class="title">
+						<a href="/board/boardDetail?boardIdx=" th:attrappend="href=${vo.boardIdx}" th:text="${vo.title}"></a>
+					</td>
 					<td th:text="${vo.hitCnt}"></td>
 					<td th:text="${vo.createDatetime}"></td>
 				</tr>
@@ -35,6 +50,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<a href='/board/boardWrite' class='btn'>글 쓰기</a>
 	</div>
 </body>
 </html>

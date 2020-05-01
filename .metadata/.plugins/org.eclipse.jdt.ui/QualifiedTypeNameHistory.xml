@@ -22,11 +22,12 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="kr.inhatc.spring.board.dto.BoardDto"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="kr.inhatc.spring.board.service.BoardService"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
 <fullyQualifiedTypeName name="kr.inhatc.spring.board.mapper.BoardMapper"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="kr.inhatc.spring.board.dto.BoardDto"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 </qualifiedTypeNameHistroy>

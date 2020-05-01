@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>게시판 작성</title>
+<link rel = "stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<div class="container">
+		<h2>게시판 작성</h2>
+		<form id='frm' name='frm' method='POST'>
+			<table class='board_detail'>
+				<tr>
+					<td>제 목</td>
+					<td><input type='text' id='title' name='title' /></td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<textarea id='content' name='content'>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

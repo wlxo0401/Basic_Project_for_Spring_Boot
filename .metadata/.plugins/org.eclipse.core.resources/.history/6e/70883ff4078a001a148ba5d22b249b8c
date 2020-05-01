@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시작페이지</title>
+</head>
+<body>
+	 <header>
+    </header>
+	</div>
+	<h1>안녕하세요. 저는 김지태입니다.</h1>
+	<a href='/board/boardList' class='btn'>글 쓰기</a>
+</body>
+</html>
