@@ -28,7 +28,18 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardDto boardDetail(int boardIdx) {
 		BoardDto board = boardMapper.boardDetail(boardIdx);
+		boardMapper.updateHit(boardIdx);
 		return boardMapper.boardDetail(boardIdx);
+	}
+
+	@Override
+	public void boardUpdate(BoardDto board) {
+		boardMapper.boardUpdate(board);
+	}
+
+	@Override
+	public void boardDelete(int id) {
+		boardMapper.boardDelete(id);
 	}
 
 }

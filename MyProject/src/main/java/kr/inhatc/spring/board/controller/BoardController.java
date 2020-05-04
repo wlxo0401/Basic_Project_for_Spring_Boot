@@ -27,7 +27,7 @@ public class BoardController {
 	@RequestMapping("/board/boardList")
 	public String boardList(Model model) {
 		List<BoardDto> list = boardService.boardList();
-		System.out.println("=============== >>>> " + list.size());
+//		System.out.println("=============== >>>> " + list.size());
 		//이름은 list로 하고 담아갈 친구는 위에 list
 		model.addAttribute("list", list);
 		// 아래 주소를 찾아간다.
@@ -51,17 +51,17 @@ public class BoardController {
 		model.addAttribute("board", board);
 		return "board/boardDetail";
 	}	
-
 	
-//	@RequestMapping("/board/boardList.do")
-//	public ModelAndView boardList() {
-//		//Model And View 를 만든다. 페이지는 board/boadrList로 이동한다.
-//		ModelAndView mv = new ModelAndView("board/boardList");
-//		//서비스를 타고 리스트를 만들어온다.
-//		List<BoardDto> list = boardService.boardList();
-//		//만들어오면 Model and View에 담는다. 모델이라는 애를 (list라는 이름으로 가지고 온다. list를 사용한다.)
-//		mv.addObject("list", list);
-//		return mv;
-//	}
-
+	@RequestMapping("/board/boardUpdate")
+	public String boardUpdate(BoardDto board) {
+		boardService.boardUpdate(board);
+		return "redirect:/board/boardList";
+	}
+	 
+	@RequestMapping("/board/boardDelete")
+	public String boardDelete(@RequestParam("boardIdx") int id) {
+		boardService.boardDelete(id);
+		return "redirect:/board/boardList";
+	}
+	
 }
