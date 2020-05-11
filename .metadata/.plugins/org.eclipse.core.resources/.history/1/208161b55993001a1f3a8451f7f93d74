@@ -1,0 +1,26 @@
+## DdataBase 설정 (hikari CP란?)
+#spring.datasource.hikari.driver-class-name = oracle.jdbc.OracleDriver
+#spring.datasource.hikari.jdbc-url = jdbc:oracle:thin:@127.0.0.1:1521:xe
+#spring.datasource.hikari.username = kimjitae
+#spring.datasource.hikari.password = 1234
+#spring.datasource.hikari.validation-timeout = 10000
+#spring.datasource.hikari.connection-timeout = 10000
+#spring.datasource.hikari.connection-test-query = SELECT 1 FROM DUAL
+
+
+
+# DdataBase 설정 (log 출력)
+spring.datasource.hikari.driver-class-name = net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+spring.datasource.hikari.jdbc-url = jdbc:oracle:thin:@127.0.0.1:1521:xe
+spring.datasource.hikari.username = kimjitae
+spring.datasource.hikari.password = 1234
+spring.datasource.hikari.validation-timeout = 10000
+spring.datasource.hikari.connection-timeout = 10000
+spring.datasource.hikari.connection-test-query = SELECT 1 FROM DUAL
+
+# 포트 설정 
+server.port = 18080
+
+
+# 카멜 표기법 - AB_CG 스네이크 표기법 맵핑 설정
+mybatis.configuration.map-underscore-to-camel-case=true

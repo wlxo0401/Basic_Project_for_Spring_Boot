@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug = "ture">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- DEBUG 용 -->
+	<appender name = "console" class = "ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d %5p [%c] %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- INFO 용 -->
+	<appender name = "console.infolog" class = "ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d %5p %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</configuration>
