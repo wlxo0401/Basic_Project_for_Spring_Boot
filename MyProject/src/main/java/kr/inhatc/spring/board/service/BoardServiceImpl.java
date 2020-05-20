@@ -58,8 +58,12 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardDto boardDetail(int boardIdx) {
 		BoardDto board = boardMapper.boardDetail(boardIdx);
+		
+		//파일 정보
+		List<FileDto> fileList = boardMapper.selectBoardFileList(boardIdx);
+		board.setFileList(fileList);
 		boardMapper.updateHit(boardIdx);
-		return boardMapper.boardDetail(boardIdx);
+		return board;
 	}
 
 	@Override
@@ -70,6 +74,12 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void boardDelete(int id) {
 		boardMapper.boardDelete(id);
+	}
+
+	@Override
+	public FileDto selectFileInfo(int idx, int boardIdx) {
+		FileDto boardFile = boardMapper.selectFileInfo(idx, boardIdx);
+		return boardFile;
 	}
 
 }
