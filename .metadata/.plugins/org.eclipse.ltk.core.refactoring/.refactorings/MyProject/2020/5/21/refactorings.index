@@ -2,3 +2,57 @@
 1589685017910	Rename resource 'UserList.html'
 1589685261310	Copy compilation unit
 1589685482507	Delete element
+1589968740024	Delete element
+1589968753090	Delete element
+1589968801776	Delete element
+1589968821928	Rename package 'kr.inhatc.spring.member.Controller'
+1589968835639	Copy packages
+1589968840003	Delete element
+1589968861143	Delete element
+1589968862194	Delete element
+1589968862920	Delete element
+1589968863587	Delete element
+1589968875504	Copy package
+1589968877394	Delete element
+1589968887477	Copy package
+1589968890279	Delete element
+1589968901775	Copy package
+1589968905176	Delete element
+1589968905971	Delete element
+1589968929718	Copy package
+1589968937507	Delete element
+1589979288811	Delete element
+1589979401631	Rename package 'kr.inhatc.spring.member.adfasd'
+1589979425978	Rename package 'kr.inhatc.spring.member.controller'
+1589979462479	Delete element
+1589979463542	Delete element
+1589979464568	Delete element
+1589979485390	Delete element
+1590029294945	Delete element
+1590029465602	Delete element
+1590030522990	Rename resource 'MemberList.html'
+1590030614787	Rename resource 'Member'
+1590033740560	Move file
+1590033782529	Move file
+1590033792344	Delete element
+1590033801357	Copy folder
+1590033812465	Rename resource 'boardDetail.html'
+1590033824028	Rename resource 'boardWrite.html'
+1590033829788	Rename resource 'boardList.html'
+1590033834736	Delete element
+1590033844148	Copy package
+1590033978519	Rename package 'kr.inhatc.spring.member.controller'
+1590034028462	Delete element
+1590034035850	Copy compilation unit
+1590034039340	Copy compilation units
+1590034043180	Copy compilation unit
+1590034048374	Copy compilation units
+1590034059121	Rename type 'BoardController'
+1590034084458	Rename type 'BoardDto'
+1590034093665	Rename type 'BoardMapper'
+1590034103558	Rename type 'BoardService'
+1590034114306	Rename type 'BoardServiceImpl'
+1590057167527	Rename type 'FileDto'
+1590134965771	Rename type 'memberFileDto'
+1590135003245	Rename type 'memberFileUtils'
+1590138974332	Delete elements

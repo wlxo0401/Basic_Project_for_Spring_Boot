@@ -1,0 +1,25 @@
+package kr.inhatc.spring.member.dto;
+
+import java.util.List;
+
+import lombok.Data;
+
+// DTO : Data Transfer Object 데이터를 전달해주는 객체
+@Data
+public class MemberDto {
+	List<MemberDto> memberList();
+
+	void memberInsert(MemberDto member);
+
+	MemberDto memberDetail(String memberId);
+
+	void memberUpdate(MemberDto member);
+
+	void memberDelete(String memberId);
+
+	void memberFileInsert(List<MFileDto> list);
+
+	List<MFileDto> selectMemberFileList(String memberId);
+
+	MFileDto selectFileInfo(int idx, String memberId);
+}

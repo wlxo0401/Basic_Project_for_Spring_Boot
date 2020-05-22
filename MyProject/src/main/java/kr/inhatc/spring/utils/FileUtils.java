@@ -26,9 +26,6 @@ public class FileUtils {
 		
 		List<FileDto> fileList = new ArrayList<FileDto>();
 		
-		
-		
-		
 		// 파일이 업로드 될 폴더 생성
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyyMMdd");
 		ZonedDateTime current = ZonedDateTime.now();
@@ -64,7 +61,6 @@ public class FileUtils {
 					
 					
 					String newFileName = Long.toString(System.nanoTime()) + originalFileExtension;
-					
 					FileDto boardFile = new FileDto();
 					boardFile.setBoardIdx(boardIdx);
 					boardFile.setFileSize(multipartFile.getSize());

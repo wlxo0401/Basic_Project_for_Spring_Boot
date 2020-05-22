@@ -10,13 +10,10 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
 	
 	@Bean
 	public CommonsMultipartResolver multipartResolver() {
-//		파일 크기 같은 것을 설정 가능 하다.
 		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
 		commonsMultipartResolver.setDefaultEncoding("UTF-8");
-		commonsMultipartResolver.setMaxUploadSizePerFile(10 * 1024 * 1024); // 5MB
+		//파일 크기를 5MB로 제한
+		commonsMultipartResolver.setMaxUploadSizePerFile(10 * 1024 * 1024);
 		return commonsMultipartResolver;
-		
-		
 	}
-
 }

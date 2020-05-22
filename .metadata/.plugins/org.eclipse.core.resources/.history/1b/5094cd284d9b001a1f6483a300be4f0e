@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>게시판 리스트</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<header>
+		<h1>게시판 구현 - 게시판 페이지</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="sub-menu-parent" tab-index="0"><a href="/">메인페이지</a>
+			</li>
+			<li class="sub-menu-parent" tab-index="0"><a
+				href="/board/boardList">게시판 페이지</a></li>
+			<li class="sub-menu-parent" tab-index="0"><a
+				href="/Member/MemberList">맴버 리스트</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h2>게시판 목록</h2>
+		<table class="board_list">
+			<colgroup>
+				<col width="15%" />
+				<col width="*" />
+				<col width="15%" />
+				<col width="20%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">아이디</th>
+					<th scope="col">이름</th>
+					<th scope="col">가입날자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if='${#lists.size(list)} > 0' th:each='vo : ${list}'>
+					<td class="title"><a href="/member/memberDetail?memberId=" th:attrappend="href=${vo.memberId}" th:text="${vo.memberId}"></a></td>
+					<td th:text="${vo.name}"></td>
+					<td th:text="${vo.joinDate}"></td>
+				</tr>
+				<tr th:unless="${#lists.size(list)} > 0">
+					<td colspan="4">조회된 결과가 없습니다.</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href='/member/memberWrite' class='btn'>글 쓰기</a>
+	</div>
+</body>
+</html>

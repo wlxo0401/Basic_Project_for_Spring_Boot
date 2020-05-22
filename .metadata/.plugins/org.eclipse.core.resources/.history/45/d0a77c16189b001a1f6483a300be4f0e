@@ -1,0 +1,14 @@
+package kr.inhatc.spring.member.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import kr.inhatc.spring.member.dto.MemberDto;
+
+@Mapper
+public interface MemberMapper {
+
+	List<MemberDto> memberList();
+
+}
