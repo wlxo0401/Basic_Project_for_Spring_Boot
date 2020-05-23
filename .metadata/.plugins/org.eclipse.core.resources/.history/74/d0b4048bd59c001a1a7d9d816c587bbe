@@ -31,21 +31,15 @@ server.port = 18080
 ################
 mybatis.configuration.map-underscore-to-camel-case=true
 
-spring.thymeleaf.cache=false
-spring.resources.cache.period=0
+
 ################
 # JPA 설정
-# 어느정도 테이블이 안정되면 update로 바꾼다.
 ################
-
 spring.jpa.hibernate.ddl-auto=create
 #spring.jpa.hibernate.ddl-auto=update
 
-
-#쿼리와 관련된 내용들을 포맷을 잡아서 보여줄 것이냐, 커맨트를 보여줄 것이냐, 즉 옵션
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.use_sql_comments=true
-
 
 ##사용할 DB 선택 - 오라클 선택
 spring.jpa.database=oracle
@@ -57,16 +51,5 @@ spring.jpa.generate-ddl=false
 spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.show_sql=true
 
-## SQL 로그 설명
+## SQL 로그 설
 logging.level.org.hibernate.type.descriptor.sql=trace
-
-
-## 하이버네이트의 새로운 ID 생성 옵션의 사용 여부 설정
-spring.jpa.hibernate.use-new-id-generator-mappings=false
-
-
-
-
-
-
-

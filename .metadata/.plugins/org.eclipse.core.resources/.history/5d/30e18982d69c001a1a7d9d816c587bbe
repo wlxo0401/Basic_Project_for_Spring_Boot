@@ -31,8 +31,7 @@ server.port = 18080
 ################
 mybatis.configuration.map-underscore-to-camel-case=true
 
-spring.thymeleaf.cache=false
-spring.resources.cache.period=0
+
 ################
 # JPA 설정
 # 어느정도 테이블이 안정되면 update로 바꾼다.

@@ -65,13 +65,6 @@ public class DataBaseConfiguration {
 		return new SqlSessionTemplate(sqlSessionFactory);
 	}
 	
-	/**
-	 * <pre>
-	 * 1. 개요 : JPA 설정
-	 * 2. 처리내용 : JPA 설정 빈 등록
-	 * @Method Name : hibernateConfig
-	 * @return
-	 */
 	@Bean
 	@ConfigurationProperties(prefix = "spring.jpa")
 	public Properties hibernateConfig() {
