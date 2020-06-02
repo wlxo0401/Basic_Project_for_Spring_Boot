@@ -1,5 +1,0 @@
-package kr.inhatc.spring.member.service;
-
-public interface MemberService {
-
-}

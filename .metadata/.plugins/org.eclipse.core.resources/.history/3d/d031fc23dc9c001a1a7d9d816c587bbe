@@ -1,0 +1,6 @@
+package kr.inhatc.spring.user.entity;
+
+@Enti
+public class User {
+
+}

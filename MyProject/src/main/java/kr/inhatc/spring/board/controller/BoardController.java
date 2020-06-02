@@ -31,10 +31,10 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@RequestMapping("/")
-	public String hello() {
-		return "Index.html";
-	}
+//	@RequestMapping("/")
+//	public String hello() {
+//		return "Index.html";
+//	}
 
 	@RequestMapping("/board/boardList")
 	public String boardList(Model model) {
