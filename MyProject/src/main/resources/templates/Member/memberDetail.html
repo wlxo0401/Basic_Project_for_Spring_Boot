@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>게시판 상세</title>
-<link rel="stylesheet" th:href="@{/css/style.css}"></link>
-</head>
-<body>
-	<header>
-		<h1>게시판 구현 - 멤버 수정 페이지</h1>
-	</header>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<title>게시판 작성</title>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content">
+<title>멤버 상세 정보</title>
 	<hr>
 	<div class="container">
 		<h2>멤버 상세 정보</h2>
@@ -103,6 +107,6 @@
 			});
 		});
 	</script>
-
-</body>
+	<hr>
+</div>
 </html>

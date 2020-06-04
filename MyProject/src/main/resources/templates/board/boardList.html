@@ -12,9 +12,10 @@
 </th:block>
 
 <div layout:fragment="content">
-
+<title>게시글 목록</title>
+	<hr>
 	<div class="container">
-		<h2>게시판 목록</h2>
+		<h2>게시글 목록</h2>
 
 		<table class="table">
 			<thead class="thead-dark">
@@ -38,9 +39,10 @@
 				</tr>
 			</tbody>
 		</table>
-		<a href='/board/boardWrite' class='btn'>글 쓰기</a>
+		<button type="button" class="btn btn-light"><a href='/board/boardWrite' class='btn'>글 쓰기</a></button>
+		
 	</div>
-
+	<hr>
 </div>
 </html>
 

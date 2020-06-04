@@ -1,9 +1,0 @@
-package kr.inhatc.spring.user.service;
-
-import org.springframework.stereotype.Service;
-
-//Autowired를 위해 서비스 어노테이션 해주어야함
-@Service
-public class UserServiceImpl implements UserService{
-
-}

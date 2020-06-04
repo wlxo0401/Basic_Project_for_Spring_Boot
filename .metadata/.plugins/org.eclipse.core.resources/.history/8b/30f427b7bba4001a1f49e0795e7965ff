@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<title>게시판 작성</title>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content">
+
+	<div class="container">
+		<h2>멤버 등록</h2>
+		<article class="container">
+			<div class="col-sm-6 col-md-offset-3">
+				<form id="frm" name="frm" method="POST"
+					action="/member/memberInsert" enctype="multipart/form-data">
+					<table class="board_detail">
+						<tr>
+							<td>아이디</td>
+							<td><input type="text" id="memberId" name="memberId" /></td>
+							<td>이메일</td>
+							<td><input type="text" id="email" name="email" /></td>
+						</tr>
+						<tr>
+							<td>사용가능여부</td>
+							<td><input type="text" id="enabled" name="enabled" /></td>
+							<td>이름</td>
+							<td><input type="text" id="name" name="name" /></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><input type="text" id="pw" name="pw" /></td>
+							<td>권한</td>
+							<td><input type="text" id="role" name="role" /></td>
+						</tr>
+					</table>
+					<input type="file" id="files" name="files" multiple="multiple">
+					<button type="submit" id="submit" value="등록" class="btn">asdsa   </button>
+				</form>
+			</div>
+		</article>
+
+
+
+	</div>
+</html>
+
+

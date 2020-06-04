@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<title>게시판 작성</title>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content">
+	<hr>
+	<div class="container">
+		<h2>멤버 등록</h2>
+		<article class="container">
+			<div class="col-sm-6 col-md-offset-3">
+				<form id="frm" name="frm" method="POST" action="/member/memberInsert" enctype="multipart/form-data">
+
+					<div class="form-group">
+						<label for="inputID">아이디</label> 
+						<input type="text" class="form-control" id="memberId" name="memberId" placeholder="아이디를 입력해 주세요">
+					</div>
+					
+					<div class="form-group">
+                        <label for="inputPassword">비밀번호</label>
+                        <input type="password" class="form-control" id="pw" name="pw" placeholder="비밀번호를 입력해주세요">
+                    </div>
+                    
+                    <div class="form-group">
+					<label for="inputPasswordCheck">비밀번호 확인</label>
+						<input type="password" class="form-control" id="inputPasswordCheck" placeholder="비밀번호 확인을 위해 다시한번 입력 해 주세요">
+					</div>
+
+					
+					<div class="form-group">
+                        <label for="InputEmail">이메일 주소</label>
+                        <input type="email" class="form-control" id="email"  name="email" placeholder="이메일 주소를 입력해주세요">
+                    </div>
+
+					<div class="form-group">
+                        <label for="InputName">이름</label>
+                        <input type="text" class="form-control" id="name"  name="name" placeholder="이름을 입력해주세요">
+                    </div>
+
+					<div class="form-group">
+                        <label for="InputRole">권한</label>
+                        <input type="text" class="form-control" id="role"  name="role" placeholder="권한을 입력해주세요">
+                    </div>
+                    
+					<input type="file" id="files" name="files" multiple="multiple">
+					
+					<div class="form-group text-center">
+                    	<button type="submit" id="submit" value="등록" class="btn btn-primary">
+                    		회원가입<i class="fa fa-check spaceLeft"></i>
+						</button>                    
+					</div>
+				</form>
+			</div>
+		</article>
+<script>
+$(function(){
+    // 회원 가입 처리
+    $('#submit').click(function(e){
+        e.preventDefault();
+        if($("#inputName").val() ==''){
+            alert('이름을 입력하세요');
+            $("#inputName").focus();
+            return false;
+        }
+
+        var email = $('#email').val();
+        if(email == ''){
+            alert('이메일을 입력하세요');
+            $("#InputEmail").focus();
+            return false;
+        } else {
+            var emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!emailRegex.test(email)) {
+                alert('이메일 주소가 유효하지 않습니다. ex)abc@gmail.com');
+                $("#inputEmail").focus();
+                return false;
+            }
+        }
+
+        if($("#pw").val() ==''){
+            alert('비밀번호를 입력하세요');
+            $("#pw").focus();
+            return false;
+        }
+
+        if($("#inputPasswordCheck").val() ==''){
+            alert('비밀번호를 다시 한번 더 입력하세요');
+            $("#inputPasswordCheck").focus();
+            return false;
+        }
+        
+        if($("#inputPassword").val()!== $("#inputPasswordCheck").val()){
+            alert('비밀번호를 둘다 동일하게 입력하세요');
+            return false;
+        }
+
+        if($("#inputMobile").val() ==''){
+            alert('휴대폰 번호를 입력하세요');
+            $("#inputMobile").focus();
+            return false;
+        }
+              
+    });
+
+});
+</script>
+<!-- https://link2me.tistory.com/1403 -->
+
+	</div>
+		<hr>
+</div>
+</html>
+
+
