@@ -36,6 +36,16 @@ public class BoardController {
 //		return "Index.html";
 //	}
 
+	
+	@RequestMapping("/test/testPage")
+	public String testPage() {
+		return "/test/testPage";
+	}
+	
+	
+	
+	
+	
 	@RequestMapping("/board/boardList")
 	public String boardList(Model model) {
 		List<BoardDto> list = boardService.boardList();

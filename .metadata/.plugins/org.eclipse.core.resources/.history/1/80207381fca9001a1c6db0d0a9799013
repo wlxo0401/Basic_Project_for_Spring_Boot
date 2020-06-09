@@ -1,0 +1,23 @@
+package kr.inhatc.spring.configuration;
+
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+
+	@Override
+	protected void configure(HttpSecurity security) throws Exception {
+//		"/"로 된아이는 누구나 다 들어와
+//		"user/"는 ROLE_MEMBER들만 들오와
+//		"board/"는 ROLE_ADMIN만 들어와
+		security.authorizeRequests()
+			.antMatchers("/").permitAll()
+			.antMatchers("/user/**").hasRole("ROLE_MEMBER")
+			.antMatchers("/board/**").hasRole("ROLE_ADMIN");
+	}
+	
+	
+	
+}

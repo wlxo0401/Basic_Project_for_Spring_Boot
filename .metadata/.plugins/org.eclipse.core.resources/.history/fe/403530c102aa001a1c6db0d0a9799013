@@ -1,0 +1,5 @@
+package kr.inhatc.spring.login.controller;
+
+public class loginController {
+
+}
