@@ -22,7 +22,7 @@
 		</selectKey>
 		INSERT INTO T_BOARD(BOARD_IDX, TITLE, CONTENTS, CREATE_DATETIME,
 		CREATOR_ID) VALUES (#{boardIdx}, #{title}, #{contents}, sysdate,
-		'admin')
+		'Member')
 	</insert>
 
 
@@ -39,7 +39,7 @@
 		CONTENTS =
 		#{contents},
 		CREATE_DATETIME = SYSDATE,
-		CREATOR_ID = 'admin'
+		CREATOR_ID = 'Member'
 		WHERE
 		BOARD_IDX = #{boardIdx}
 	</update>

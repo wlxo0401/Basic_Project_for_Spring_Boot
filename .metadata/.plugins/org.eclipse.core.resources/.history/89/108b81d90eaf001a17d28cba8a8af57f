@@ -1,0 +1,16 @@
+package kr.inhatc.spring.friend.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import kr.inhatc.spring.user.entity.Users;
+
+@Repository
+public interface FriendRepository extends CrudRepository<Users, String>{
+
+	List<Users> findAllByOrderByIdDesc();
+ 
+
+}

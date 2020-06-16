@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+
+
+html {
+height: 100%;
+
+}
+body {
+margin: 0;
+height: 100%;
+
+}
+
+
+.wrap {
+min-height: 85%;
+position: relative;
+padding-bottom: 19px; /* footer height */
+
+
+}
+
+
+
+.footer {
+
+bottom: 0;
+left: 0;
+right: 0;
+	padding: 15px 0;
+
+	text-align: center;
+
+
+}
+
+/*-----------------------------------------------------------------------------------
+
+Project Name: Simple Minimal CSS3 Navigation
+Tutorial Website URI: www.w3update.com
+Description:Sterling is a Responsive WordPress Theme with a multitude of amazing CMS features.
+Author: w3update.com
+Author URI:http://www.w3update.com
+Version:1
+License:GNU General Public License
+License URI:license.txt
+*/
+
+/* The main container */
+.nav {
+  /* Layout & positioning */
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 750px; /* CHANGE this if you want another width or remove it if you want the width of the container */
+	height: 43px;
+	list-style: none;
+
+	/* Background */
+	background: #0595c4;
+}
+
+.nav>li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+/* The main navigation links */
+.nav>li>a {
+	/* Layout & positioning */
+	display: block;
+	padding: 15px 20px;
+	line-height: 13px;
+
+	/* Typography */
+	font-family: Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	font-size: 13px;
+	color: #fff;
+	font-weight: bold;
+
+	/* Effects */
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	-o-transition: background .2s;
+	-ms-transition: background .2s;
+}
+
+/* The hover state of the navigation links */
+.nav>li>a:hover, .nav>li:hover>a {
+	background: #11ac4f;
+}
+
+.nav>.dropdown>a {
+	padding-right: 25px;
+}
+
+/* The '+' sign which indicates a submenu */
+
+.nav>.dropdown>a::after {
+	 content: "";
+	 position: absolute;
+	 top: 19px;
+	 right: 13px;
+	 width: 1px;
+	 height: 5px;
+	 background: #fff;
+}
+
+.nav>.dropdown>a::before {
+	 content: "";
+	 position: absolute;
+	 top: 21px;
+	 right: 11px;
+	 width: 5px;
+	 height: 1px;
+	 background: #fff;
+}
+
+.nav>.dropdown>a:hover::after, .nav>.dropdown:hover>a::after {
+	background: transparent;
+}
+
+/* General submenu styling */
+.nav ul {
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding: 7px 0;
+	background: #fff;
+	left: -9999px;
+	border-bottom: 1px solid #d8d8d8;
+	border-left: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
+}
+
+.nav ul li {
+	position: relative;
+	background: #fff;
+	padding: 0 9px;
+	width: 0px;
+	height: 0px;
+	-webkit-transition: height .3s, width .3s;
+	-moz-transition: height .3s, width .3s;
+	-o-transition: height .3s, width .3s;
+	-ms-transition: height .3s, width .3s;
+}
+
+/* Level 1 submenus */
+.nav>li:hover>ul {
+	left: 0px;
+}
+
+/* Level 2+ submenus */
+.nav ul ul {
+	border-top: 1px solid #d8d8d8;
+}
+
+.nav ul>li:hover>ul {
+	top: -8px;
+	left: 148px;
+}
+
+/* Expanding the submenus on hover */
+.nav li:hover>ul>li {
+	width: 130px;
+	height: 25px;
+}
+
+/* The links of the submenus */
+.nav ul li a {
+	/* Layout */
+	display: block;
+	position: relative;
+	padding: 5px 10px;
+	border-radius: 3px;
+	width: 110px;
+
+	/* Typography */
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #0595c4;
+
+	/* Effects */
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	-ms-transition: all .2s;
+}
+
+/* The hover state of the submenu links */
+.nav ul li a:hover, .nav ul li:hover>a {
+	background: #0595c4;
+	color: #fff;
+}
+
+/* The '+' sign indicating a level 2+ submenu */
+.nav ul>.dropdown>a::after {
+	 content: "";
+	 position: absolute;
+	 top: 11px;
+	 right: 8px;
+	 width: 1px;
+	 height: 5px;
+	 background: #0595c4;
+}
+
+.nav ul>.dropdown>a::before {
+	 content: "";
+	 position: absolute;
+	 top: 13px;
+	 right: 6px;
+	 width: 5px;
+	 height: 1px;
+	 background: #0595c4;
+}
+
+.nav ul>.dropdown:hover>a::after {
+	background: transparent;
+}
+.nav ul>.dropdown:hover>a::before {
+	background: #fff;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<title>게시판 작성</title>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content">
+<title>유저 상세 정보</title>
+	<hr>
+	<div class="container">
+		<h2>유저 상세 정보</h2>
+		<form role="form" th:method='POST' th:action="'/friend/friendUpdate/' + ${friend.id}" enctype="multipart/form-data">
+		<table class="table table-striped table-bordered">
+				<tr>
+					<td>아이디</td>
+					<td><input type='text' id='id' name='id' th:value="${friend.id}" disabled="disabled"/></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type='text' id='name' name='name' th:value="${friend.name}"  disabled="disabled"/></td>
+				</tr>
+				<tr>
+					<td>나이</td>
+					<td><input type='text' id='age' name='age' th:value="${friend.age}"/></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type='text' id='phone' name='phone' th:value="${friend.phone}"/></td>
+				</tr>
+				<tr>
+					<td>사는 곳</td>
+					<td><input type='text' id='city' name='city' th:value="${friend.city}"/></td>
+				</tr>
+				<tr>
+					<td>직업</td>
+					<td><input type='text' id='job' name='job' th:value="${friend.job}"/></td>
+				</tr>
+			</table>
+			<!-- 		<input type='file' id='files' name='files' multiple="multiple" /> -->
+			<input type='submit' id='submit' value='수 정' class="btn btn-success" />
+			<button class="btn btn-danger">
+				<a href="/friend/friendDelete/" th:attrappend="href=${friend.id}">삭 제</a>
+			</button>
+			<button class="btn btn-warning">
+				<a href="/friend/friendList">목 록</a>
+			</button>
+		</form>
+	
+	</div>
+	
+		<hr>
+</div>
+</html>

@@ -5,36 +5,36 @@
 		<item key="DIALOG_Y_ORIGIN" value="859"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="게시글"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="게시글"/>
-			<item value="크기"/>
-			<item value="=&gt; 크기 :"/>
-			<item value="여기"/>
-			<item value="INSERT INTO T_MFILE"/>
-			<item value="다운로드"/>
-			<item value="filelist"/>
-			<item value="논문"/>
-			<item value="돌궐족"/>
-			<item value="&#x09;&#x09;List&lt;MFileDto&gt; fileList = memberMapper.selectMemberFileList(memberId);"/>
-			<item value="selectMemberFileList"/>
-			<item value="돌궐"/>
-			<item value="memberfile"/>
-			<item value="board"/>
-			<item value="member"/>
+			<item value="user"/>
+			<item value="파주"/>
+			<item value="김지태"/>
+			<item value="파주시"/>
+			<item value="ㅕㄴㄷㄱ"/>
+			<item value="fid"/>
+			<item value="id"/>
+			<item value="b"/>
+			<item value="using generated"/>
+			<item value="변경"/>
+			<item value="111"/>
+			<item value="using ge"/>
+			<item value="로그"/>
+			<item value="using gene"/>
+			<item value="using"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="464"/>
-		<item key="DIALOG_Y_ORIGIN" value="734"/>
+		<item key="DIALOG_X_ORIGIN" value="439"/>
+		<item key="DIALOG_Y_ORIGIN" value="1114"/>
 		<item key="DIALOG_WIDTH" value="393"/>
 		<item key="DIALOG_HEIGHT" value="523"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

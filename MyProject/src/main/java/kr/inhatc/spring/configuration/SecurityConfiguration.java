@@ -1,8 +1,11 @@
 package kr.inhatc.spring.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
@@ -10,15 +13,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity security) throws Exception {
 		// "/"로 된아이는 누구나 다 들어와
-		security.authorizeRequests().antMatchers("/").permitAll();
-		
-		// MEMBER 권란이 있는 사용자 접근 경로 , hasAnyRole 여러가지 권란 가능
-		security.authorizeRequests().antMatchers("/user/**", "/test/**").hasAnyRole("MEMBER", "ADMIN");
-		
-		// ADMIN 권란이 있는 사용자 접근 경로 hasRole 특정 권한 가능
-		security.authorizeRequests().antMatchers("/board/**").hasRole("ADMIN");
-		//쓸때 그냥 MEMBER로 쓰면 여기서 자동으로 ROLE_MEMBER 이런식으로 만들어준다고함
-		
+//		security.authorizeRequests().antMatchers("/").permitAll();
+//		
+//		// MEMBER 권란이 있는 사용자 접근 경로 , hasAnyRole 여러가지 권란 가능
+//		security.authorizeRequests().antMatchers("/user/**", "/test/**").hasAnyRole("MEMBER", "ADMIN");
+//		
+//		// ADMIN 권란이 있는 사용자 접근 경로 hasRole 특정 권한 가능
+//		security.authorizeRequests().antMatchers("/board/**").hasRole("ADMIN");
+//		//쓸때 그냥 MEMBER로 쓰면 여기서 자동으로 ROLE_MEMBER 이런식으로 만들어준다고함
+//		
 		
 		//크로스 사이트 위조 요청에 대한 설정 1번 영상 41분20초
 		//Restfull을 사용하기 위해서는 비활성화
@@ -34,7 +37,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		security.logout().logoutUrl("/login/logout").invalidateHttpSession(true).logoutSuccessUrl("/");
 		
 	}
-	
-	
+	/**
+	 * 1. 개요 : 패스워드에 암호화 처리
+	 * 2. 처리내용 : 암호화
+	 * @return
+	 */
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	}
 	
 }

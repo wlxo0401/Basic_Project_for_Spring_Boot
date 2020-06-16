@@ -1,0 +1,5 @@
+package kr.inhatc.spring.friend.entity;
+
+public class Friend {
+
+}

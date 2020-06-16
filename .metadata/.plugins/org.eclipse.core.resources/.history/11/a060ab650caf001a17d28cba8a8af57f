@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<title>게시판 작성</title>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content">
+<title>유저 상세 정보</title>
+	<hr>
+	<div class="container">
+		<h2>유저 상세 정보</h2>
+		<form role="form" th:method='POST' th:action="'/user/userUpdate/' + ${user.id}" enctype="multipart/form-data">
+		<table class="table table-striped table-bordered">
+				<tr>
+					<td>아이디</td>
+					<td><input type='text' id='id' name='id' th:value="${user.id}" disabled="disabled"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type='text' id='pw' name='pw' th:value="${user.pw}"/></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type='text' id='name' name='name' th:value="${user.name}"/></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type='text' id='email' name='email' th:value="${user.email}"/></td>
+				</tr>
+				<tr>
+					<td>사용 가능 여부</td>
+					<td><input type='text' id='enabled' name='enabled' th:value="${user.enabled}"/></td>
+				</tr>
+				<tr>
+					<td>권한</td>
+					<td><input type='text' id='role' name='role' th:value="${user.role}"/></td>
+				</tr>
+			</table>
+			<!-- 		<input type='file' id='files' name='files' multiple="multiple" /> -->
+			<input type='submit' id='submit' value='수 정' class="btn btn-success" />
+			<button>
+				<a href="/user/userDelete/" th:attrappend="href=${user.id}">삭 제</a>
+			</button>
+			<button>
+				<a href="/user/userList">목 록</a>
+			</button>
+		</form>
+	
+	</div>
+	
+		<hr>
+</div>
+</html>

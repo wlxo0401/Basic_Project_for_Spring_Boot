@@ -1,0 +1,17 @@
+package kr.inhatc.spring.friend.service;
+
+import java.util.List;
+
+import kr.inhatc.spring.friend.entity.Friends;
+
+public interface FriendService {
+
+	List<Friends> friendList();
+
+	void saveFriends(Friends friend);
+
+	Friends friendDetail(String fid);
+
+	void friendDelete(String fid);
+
+}

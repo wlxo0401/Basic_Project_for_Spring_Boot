@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:fragment="menuFragment">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/">김지태</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse text-black"
+			id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="/user/userList">친구목록</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/board/boardList">친구신청</a></li>
+				<li class="nav-item"><a class="nav-link" href="/test/testPage">소개페이지</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">빠른이동 </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="https://www.youtube.com/" target="blank">유튜브</a>
+						<a class="dropdown-item" href="https://www.naver.com/" target="blank">네이버</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="http://cyber.inhatc.ac.kr/" target="blank">이러닝</a>
+					</div></li>
+
+
+				<!-- <li class="nav-item"><a class="nav-link disabled" href="#"
+					tabindex="-1" aria-disabled="true">Disabled</a></li> -->
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<a th:href="@{/login/login}"><button
+						class="btn btn-primary btn-sm" type="button">로그인</button></a> &nbsp;
+				<a th:href="@{/login/logout}"><button
+						class="btn btn-danger btn-sm" type="button">로 그 아 웃</button></a>
+			</form>
+		</div>
+	</nav>
+</header>
+</html>

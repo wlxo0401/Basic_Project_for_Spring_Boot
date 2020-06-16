@@ -12,10 +12,10 @@
 </th:block>
 
 <div layout:fragment="content">
-<title>게시글 작성</title>
+<title>친구 신청</title>
 	<hr>
 	<div class="container">
-		<h2>게시판 작성</h2>
+		<h2>친구 등록 신청하기 - 내용을 잘 적어주세요</h2>
 		<form id='frm' name='frm' method='POST' action='/board/boardInsert' enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="exampleFormControlInput1">제목</label>
@@ -24,7 +24,9 @@
 
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">내용</label>
-				<textarea class="form-control" id="contents" name="contents" rows="10"></textarea>
+				<textarea class="form-control" id="contents" name="contents" rows="15"
+				 placeholder="아이디 &#10;이름&#10;나이&#10;전화번호&#10;사는 곳&#10;직업&#10;※위 항목을 필수록 입력 해주세요.&#10;하고 싶은 말 : 제대로 입력해주세요."
+				 ></textarea>
 			</div>
 
 
